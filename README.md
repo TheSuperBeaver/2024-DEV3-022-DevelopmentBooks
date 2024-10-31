@@ -92,3 +92,11 @@ The project includes unit tests that can be run using:
 ```bash
 mvn test
 ```
+
+## ArchUnit and Jacoco
+
+To safeguard the code, an ArchUnit test can be found in src/test/java/be/bnppf/development/books/ArchitectureTest
+I've chosen an Onion/Hexagonal architecture in it's simplest for, since some layers are not required for this simple example
+
+Jacoco is there to ensure that at least 80% of each class is tested (Configuration found in the pom.xml)
+
