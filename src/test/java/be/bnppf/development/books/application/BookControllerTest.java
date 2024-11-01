@@ -1,5 +1,6 @@
 package be.bnppf.development.books.application;
 
+import be.bnppf.development.books.application.controller.BookController;
 import be.bnppf.development.books.domain.model.Book;
 import be.bnppf.development.books.domain.model.BookMother;
 import org.junit.jupiter.api.Test;

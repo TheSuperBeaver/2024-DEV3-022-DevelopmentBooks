@@ -51,4 +51,31 @@ class BookTest {
         }
     }
 
+    @Test
+    void canInstantiateWithoutPrice() {
+        Book book = new Book(1, "title", "author", 2024);
+        assertEquals(1, book.getId());
+        assertEquals("title", book.getTitle());
+        assertEquals("author", book.getAuthor());
+        assertEquals(2024, book.getYear());
+        assertEquals(50, book.getPrice());
+        assertEquals("Book{id=1, title='title', author='author', year=2024, price=50.0}", book.toString());
+    }
+
+    @Test
+    void canSetValues() {
+        Book book = new Book();
+        book.setTitle("title");
+        book.setAuthor("author");
+        book.setYear(2024);
+        book.setPrice(50);
+
+        assertEquals(0, book.getId());
+        assertEquals("title", book.getTitle());
+        assertEquals("author", book.getAuthor());
+        assertEquals(2024, book.getYear());
+        assertEquals(50, book.getPrice());
+        assertEquals("Book{id=0, title='title', author='author', year=2024, price=50.0}", book.toString());
+    }
+
 }

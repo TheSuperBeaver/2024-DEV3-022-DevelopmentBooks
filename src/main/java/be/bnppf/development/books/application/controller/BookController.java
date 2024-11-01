@@ -1,4 +1,4 @@
-package be.bnppf.development.books.application;
+package be.bnppf.development.books.application.controller;
 
 import be.bnppf.development.books.domain.model.Book;
 import be.bnppf.development.books.domain.service.BookService;

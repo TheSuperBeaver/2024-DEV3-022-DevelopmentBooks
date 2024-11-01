@@ -11,7 +11,7 @@ public class Book {
     private int year;
     private double price;
 
-    private Book() {}
+    Book() {}
 
     public Book(int id, String title, String author, int year, double price) {
         this.id = id;

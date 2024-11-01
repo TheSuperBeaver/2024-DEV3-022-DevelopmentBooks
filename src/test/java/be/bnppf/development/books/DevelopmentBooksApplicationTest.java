@@ -1,13 +1,14 @@
 package be.bnppf.development.books;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
-class DevelopmentBooksApplicationTest {
+@SpringBootTest
+class DevelopmentBooksApplicationTests {
 
     @Test
-    void canStartApp() {
-        String[] args = new String[0];
-        DevelopmentBooksApplication.main(args);
+    void mainMethodRuns() {
+        // Running the main method directly to achieve coverage
+        DevelopmentBooksApplication.main(new String[]{});
     }
-
 }
