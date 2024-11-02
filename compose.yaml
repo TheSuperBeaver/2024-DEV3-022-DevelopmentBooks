@@ -1,1 +1,9 @@
 services:
+  development-books:
+    container_name: dev-books
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    restart: always
