@@ -19,8 +19,9 @@ public class ArchitectureTest {
             layer("Model").definedBy("..domain.model..").
             layer("Service").definedBy("..domain.service..").
             whereLayer("Controller").mayNotBeAccessedByAnyLayer().
-            whereLayer("Controller-Dto").mayOnlyBeAccessedByLayers("Controller").
+            whereLayer("Controller-Dto").mayOnlyBeAccessedByLayers("Controller", "Service").
             whereLayer("Domain").mayOnlyBeAccessedByLayers("Controller").
-            whereLayer("Service").mayOnlyBeAccessedByLayers("Controller");
+            whereLayer("Service").mayOnlyBeAccessedByLayers("Controller").
+            whereLayer("Service").mayOnlyAccessLayers("Model", "Controller-Dto");
 }
 
