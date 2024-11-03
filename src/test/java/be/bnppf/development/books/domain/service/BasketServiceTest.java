@@ -52,7 +52,8 @@ class BasketServiceTest {
                 arguments(new Basket(of(new BasketItem(1, 1), new BasketItem(2, 1), new BasketItem(3, 1))), 135.0), // 10% discount 3 different books
                 arguments(new Basket(of(new BasketItem(1, 1), new BasketItem(2, 1), new BasketItem(3, 1), new BasketItem(4, 1))), 160.0), // 20% discount 4 different books
                 arguments(new Basket(of(new BasketItem(1, 1), new BasketItem(2, 1), new BasketItem(3, 1), new BasketItem(4, 1), new BasketItem(5, 1))), 210.0), // 25% discount max for 5+ books
-                arguments(new Basket(of(new BasketItem(1, 2), new BasketItem(2, 2), new BasketItem(3, 2), new BasketItem(4, 1), new BasketItem(5, 1))), 320.0) // Kata example
+                arguments(new Basket(of(new BasketItem(1, 2), new BasketItem(2, 2), new BasketItem(3, 2), new BasketItem(4, 1), new BasketItem(5, 1))), 320.0), // Kata example
+                arguments(new Basket(of(new BasketItem(1, 2), new BasketItem(2, 2), new BasketItem(1, 1), new BasketItem(2, 1))), 285.0) // Bug found when multiple items with the same id are on the basket
         );
     }
 

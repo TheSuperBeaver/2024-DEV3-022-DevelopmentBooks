@@ -24,7 +24,7 @@ public class BasketService {
 
     public double calculateTotal(Basket basket) {
         Map<Integer, Integer> bookQuantities = basket.getItems().stream().
-                collect(Collectors.toMap(BasketItem::getBookId, BasketItem::getQuantity));
+                collect(Collectors.toMap(BasketItem::getBookId, BasketItem::getQuantity, Integer::sum));
 
         return calculateOptimalPrice(bookQuantities);
     }
